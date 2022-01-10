@@ -30,6 +30,8 @@ int about(){
            "your color and your friend's color\n"
            "\n"
            "In case of choosing Player VS computer mode\n"
+           "it is recommended to try easy(beginner) level to be familiar with the game\n"
+           "you can try the hard level against computer and think well to beat him :)\n"
            "You will choose your turn and your color and enter your name only\n"
            "Computer will take \"computer\" as a name and yellow as a color\n"
            "\n"
@@ -55,7 +57,7 @@ int about(){
            "For fourth choice (ABOUT) >> you can choose to return main menu \"1\" OR exit \"2\"\n"
            "For fifth choice (EXIT) >> we will feel sad that you left our game :(\n"
            "\n"
-           "\"we hope you enjoy our game and you're welcome to contact us with your feedback\"\n\n");
+           "\"we hope you enjoy our game and you're welcome to contact us with your feedback :)\"\n\n");
 
 
     printf("1)"yellow"return to main menu\n"reset);
