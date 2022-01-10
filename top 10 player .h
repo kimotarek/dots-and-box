@@ -81,7 +81,7 @@ void top_player(){
         i=10;
     }
 
-    
+/*
     top = fopen("top 10 player.text", "w");
     fseek(top,0,SEEK_SET);
     for(j=0;j<i ;j++){
@@ -90,7 +90,7 @@ void top_player(){
     }
     fclose(top);
 
-
+*/
 
 
 

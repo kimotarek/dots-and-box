@@ -19,16 +19,18 @@ int mainmenu () {
     printf( "1)"yellow "start game\n"reset);
     printf("2)"yellow "load game\n"reset);
     printf("3)"yellow"top ten player\n"reset);
-    printf("4)"yellow"exit\n\n"reset);
+    printf("4)"yellow"About ?\n"reset);
+    printf("5)"yellow"exit\n\n"reset);
 
     printf("please enter your choice (1,2,3,4) :  ");
+    fflush(stdin);
     gets(s);
-    if(strcmp(s,"1")==0||strcmp(s,"2")==0||strcmp(s,"3")==0||strcmp(s,"4")==0){
+    if(strcmp(s,"1")==0||strcmp(s,"2")==0||strcmp(s,"3")==0||strcmp(s,"4")==0||strcmp(s,"5")==0){
         if(strcmp(s,"1")==0){return 1;}
         else if(strcmp(s,"2")==0){return 2;}
         else if(strcmp(s,"3")==0){return 3;}
         else if(strcmp(s,"4")==0){return 4;}
-
+        else if(strcmp(s,"5")==0){return 5;}
 
 
     }

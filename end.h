@@ -15,12 +15,7 @@ char convert ( char ch){
 
     return y;
 
-}
-
-
-
-
-
+}// convert ch to capital letter and return its ascii code
 
 
 COORD coord= {0,0};
@@ -34,8 +29,8 @@ void go(int x,int y)
 int end(char s[],int m){
 
     system("");
-    int i,l;
-
+    int i;
+    char l[20];
 
 
 
@@ -101,9 +96,12 @@ int end(char s[],int m){
         go(39,13);printf("2)"yellow"to exit "reset);
 
         go(39,16);
-        printf("enter your choice (1,2): ",l);
-        scanf("%d",&l);
-        return l ;
+        l2:
+        printf("enter your choice (1,2): ");
+        scanf("%s",l);
+        if(strcmp(l,"1")==0){return 1;}
+        else if(strcmp(l,"2")==0){return 2;}
+        else { printf(red"\t\t\t\tWARNING:"reset" your choice is incorrect\n ");  goto l2 ;}
 
     }
 
@@ -119,9 +117,14 @@ int end(char s[],int m){
         go(39,13);printf("2)"yellow"to exit "reset);
 
         go(39,16);
-        printf("enter your choice (1,2): ",l);
-        scanf("%d",&l);
-        return l ;
+        l1:
+        printf("enter your choice (1,2): ");
+        scanf("%s",l);
+        if(strcmp(l,"1")==0){return 1;}
+        else if(strcmp(l,"2")==0){return 2;}
+        else { printf(red"WARNING:"reset" your choice is incorrect\n ");  goto l1 ;}
+
+
 
     }
     

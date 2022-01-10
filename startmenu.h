@@ -1,6 +1,5 @@
 
-int startmenu ()
-{
+int startmenu (){
     system("cls");
     char x[20] ,y[20] , z[20] ,w[20],k[20];
     a:
@@ -10,11 +9,12 @@ int startmenu ()
     printf("        ""(2)"yellow"beginner\n"reset) ;
     printf("(3)"yellow"back\n"reset) ;
     printf("please enter your choice (1,2,3): ") ;
+    fflush(stdin);
     gets(x) ;
     if(strcmp(x,"3")==0) { return 0 ;}
     if (strcmp(x,"1")==0||strcmp(x,"2")==0)
     {
-        system("cls") ;
+        printf(cyan"=========================================="reset);
 
     }
     else
@@ -25,7 +25,7 @@ int startmenu ()
      }
 
     b:
-    printf("choose your suitable mode: \n") ;
+    printf("\nchoose your suitable mode: \n") ;
     printf("(1)"yellow"player VS computer"reset) ;
     printf("        ""(2)"yellow"player VS player\n"reset) ;
     printf("(3)"yellow"back\n"reset) ;
@@ -34,7 +34,7 @@ int startmenu ()
     if(strcmp(y,"3")==0) { system("cls") ; goto a;}
     if (strcmp(y,"1")==0||strcmp(y,"2")==0)
     {
-        system("cls") ;
+        printf(cyan"=========================================="reset);
 
     }
     else
@@ -46,7 +46,7 @@ int startmenu ()
 
     c:
 
-    printf("choose your turn :\n") ;
+    printf("\nchoose your turn :\n") ;
     printf("(1)"yellow"first play "reset) ;
     printf("        ""(2)"yellow"Second play \n"reset) ;
     printf("(3)"yellow"back\n"reset) ;
@@ -54,7 +54,7 @@ int startmenu ()
     gets(z) ;
     if(strcmp(z,"3")==0) {system("cls") ; goto b ;}
     if (strcmp(z,"1")==0||strcmp(z,"2")==0){
-        system("cls");
+        printf(cyan"=========================================="reset);
     }
     else
     {
@@ -69,7 +69,7 @@ if(strcmp(y,"2")==0){
 
     d:
 
-      printf("choose the colour of player1\n");
+      printf("\nchoose the colour of player1\n");
       printf("(1)"yellow"Red"reset) ;
     printf("          ""(2)"yellow"Blue\n"reset) ;
      printf("(3)"yellow"Green"reset) ;
@@ -81,7 +81,7 @@ if(strcmp(y,"2")==0){
      if(strcmp(w,"5")==0) {system("cls") ; goto c ;}
         if (strcmp(w,"1")==0||strcmp(w,"2")==0||strcmp(w,"3")==0||strcmp(w,"4")==0)
         {
-                    system("cls");
+            printf(cyan"=========================================="reset);
         }
         else
          {
@@ -91,7 +91,7 @@ if(strcmp(y,"2")==0){
          }
 
 q:
-  printf("choose the colour of player2\n");
+  printf("\nchoose the colour of player2\n");
       printf("(1)"yellow"Red"reset) ;
     printf("          ""(2)"yellow"Blue\n"reset) ;
      printf("(3)"yellow"Green"reset) ;
@@ -103,6 +103,7 @@ q:
      if(strcmp(k,"5")==0) {system("cls") ; goto d ;}
         if (strcmp(k,"1")==0||strcmp(k,"2")==0||strcmp(k,"3")==0||strcmp(k,"4")==0)
         {
+            printf(cyan"=========================================="reset);
         }
         else
          {
@@ -115,7 +116,7 @@ q:
 
 else if(strcmp(y,"1")==0){
     l:
-    printf("choose the colour of player1\n");
+    printf("\nchoose the colour of player1\n");
       printf("(1)"yellow"Red"reset) ;
     printf("          ""(2)"yellow"Blue\n"reset) ;
      printf("(3)"yellow"Green"reset) ;
@@ -125,9 +126,9 @@ else if(strcmp(y,"1")==0){
     gets(w);
 
      if(strcmp(w,"5")==0) {system("cls") ; goto c ;}
-        if (strcmp(w,"1")==0||strcmp(w,"2")==0||strcmp(w,"3")==0||strcmp(w,"4")==0)
+         if (strcmp(w,"1")==0||strcmp(w,"2")==0||strcmp(w,"3")==0||strcmp(w,"4")==0)
         {
-        
+            printf(cyan"=========================================="reset);
         }
         else
          {
@@ -144,49 +145,70 @@ else if(strcmp(y,"1")==0){
 
 
 
-
-if(strcmp(x,"1")==0&&strcmp(y,"2")==0&&strcmp(z,"2")==0&&strcmp(w,"1")==0&&strcmp(k,"1")==0){return 1 ;}//expert & player1 vs player & second player & red1 vs red = 1
-else if(strcmp(x,"1")==0&&strcmp(y,"2")==0&&strcmp(z,"1")==0&&strcmp(w,"1")==0&&strcmp(k,"2")==0){return 2;}//expert & player1 vs player & first player & red1 vs blue =2
+ if(strcmp(y,"2")==0&&strcmp(w,"1")==0&&strcmp(k,"1")==0){return 1 ;}//expert & player1 vs player & second player & red1 vs red = 1
+    else if(strcmp(y,"2")==0&&strcmp(w,"1")==0&&strcmp(k,"2")==0){return 2;}//expert & player1 vs player & first player & red1 vs blue =2
 
     
-else if(strcmp(x,"2")==0&&strcmp(y,"2")==0&&strcmp(z,"2")==0&&strcmp(w,"1")==0&&strcmp(k,"3")==0){return 3;}//beginner & player1 vs player & second player & red1 vs green =3
-else if(strcmp(x,"2")==0&&strcmp(y,"2")==0&&strcmp(z,"1")==0&&strcmp(w,"1")==0&&strcmp(k,"4")==0){return 4;}//beginner & player1 vs player & first player & red1 vs magenta =4
+    else if(strcmp(y,"2")==0&&strcmp(w,"1")==0&&strcmp(k,"3")==0){return 3;}//beginner & player1 vs player & second player & red1 vs green =3
+    else if(strcmp(y,"2")==0&&strcmp(w,"1")==0&&strcmp(k,"4")==0){return 4;}//beginner & player1 vs player & first player & red1 vs magenta =4
 
    
 
-else if(strcmp(x,"1")==0&&strcmp(y,"2")==0&&strcmp(z,"2")==0&&strcmp(w,"2")==0&&strcmp(k,"1")==0){return 5 ;}//expert & player1 vs player & second player & blue1 vs red =5
-else if(strcmp(x,"1")==0&&strcmp(y,"2")==0&&strcmp(z,"1")==0&&strcmp(w,"2")==0&&strcmp(k,"2")==0){return 6;}//expert & player1 vs player & first player & blue1 vs blue =6
+    else if(strcmp(y,"2")==0&&strcmp(w,"2")==0&&strcmp(k,"1")==0){return 5 ;}//expert & player1 vs player & second player & blue1 vs red =5
+    else if(strcmp(y,"2")==0&&strcmp(w,"2")==0&&strcmp(k,"2")==0){return 6;}//expert & player1 vs player & first player & blue1 vs blue =6
 
     
 
-else if(strcmp(x,"2")==0&&strcmp(y,"2")==0&&strcmp(z,"2")==0&&strcmp(w,"2")==0&&strcmp(k,"3")==0){return 7;}//beginner & player1 vs player & second player & blue1 vs green =7
-else if(strcmp(x,"2")==0&&strcmp(y,"2")==0&&strcmp(z,"1")==0&&strcmp(w,"2")==0&&strcmp(k,"4")==0){return 8;}//beginner & player1 vs player & first player & blue1 vs magenta =8
+    else if(strcmp(y,"2")==0&&strcmp(w,"2")==0&&strcmp(k,"3")==0){return 7;}//beginner & player1 vs player & second player & blue1 vs green =7
+    else if(strcmp(y,"2")==0&&strcmp(w,"2")==0&&strcmp(k,"4")==0){return 8;}//beginner & player1 vs player & first player & blue1 vs magenta =8
 
-else if(strcmp(x,"1")==0&&strcmp(y,"2")==0&&strcmp(z,"2")==0&&strcmp(w,"3")==0&&strcmp(k,"1")==0){return 9 ;}//expert & player1 vs player & second player & green1 vs red =9
-else if(strcmp(x,"1")==0&&strcmp(y,"2")==0&&strcmp(z,"1")==0&&strcmp(w,"3")==0&&strcmp(k,"2")==0){return 10;}//expert & player1 vs player & first player & green1 vs blue =10
-
-    
-
-else if(strcmp(x,"2")==0&&strcmp(y,"2")==0&&strcmp(z,"2")==0&&strcmp(w,"3")==0&&strcmp(k,"3")==0){return 11;}//beginner & player1 vs player & second player1 & green1 vs green =11
-else if(strcmp(x,"2")==0&&strcmp(y,"2")==0&&strcmp(z,"1")==0&&strcmp(w,"3")==0&&strcmp(k,"4")==0){return 12;}//beginner & player1 vs player & first player1 & green1 vs magenta =12
-
-
-
-else if(strcmp(x,"1")==0&&strcmp(y,"2")==0&&strcmp(z,"2")==0&&strcmp(w,"4")==0&&strcmp(k,"1")==0){return 13 ;}//expert & player1 vs player & second player2 & magenta1 vs red =13
-else if(strcmp(x,"1")==0&&strcmp(y,"2")==0&&strcmp(z,"1")==0&&strcmp(w,"4")==0&&strcmp(k,"2")==0){return 14;}//expert & player1 vs player & first player1 & magenta1 vs blue =14
+    else if(strcmp(y,"2")==0&&strcmp(w,"3")==0&&strcmp(k,"1")==0){return 9 ;}//expert & player1 vs player & second player & green1 vs red =9
+    else if(strcmp(y,"2")==0&&strcmp(w,"3")==0&&strcmp(k,"2")==0){return 10;}//expert & player1 vs player & first player & green1 vs blue =10
 
     
-else if(strcmp(x,"2")==0&&strcmp(y,"2")==0&&strcmp(z,"2")==0&&strcmp(w,"4")==0&&strcmp(k,"3")==0){return 15;}//beginner & player1 vs player & second player1 & magenta1 vs green =15
-else if(strcmp(x,"2")==0&&strcmp(y,"2")==0&&strcmp(z,"1")==0&&strcmp(w,"4")==0&&strcmp(k,"4")==0){return 16;}//beginner & player1 vs player & first player1 & magenta1 vs magenta =16
+
+    else if(strcmp(y,"2")==0&&strcmp(w,"3")==0&&strcmp(k,"3")==0){return 11;}//beginner & player1 vs player & second player1 & green1 vs green =11
+    else if(strcmp(y,"2")==0&&strcmp(w,"3")==0&&strcmp(k,"4")==0){return 12;}//beginner & player1 vs player & first player1 & green1 vs magenta =12
 
 
 
+    else if(strcmp(y,"2")==0&&strcmp(w,"4")==0&&strcmp(k,"1")==0){return 13 ;}//expert & player1 vs player & second player2 & magenta1 vs red =13
+    else if(strcmp(y,"2")==0&&strcmp(w,"4")==0&&strcmp(k,"2")==0){return 14;}//expert & player1 vs player & first player1 & magenta1 vs blue =14
 
-else if(strcmp(x,"2")==0&&strcmp(y,"1")==0&&strcmp(z,"2")==0&&strcmp(w,"1")==0){return 17;}//beginner & player vs computer & second player1 red =17
-else if(strcmp(x,"2")==0&&strcmp(y,"1")==0&&strcmp(z,"1")==0&&strcmp(w,"2")==0){return 18;}//beginner & player vs computer & first player1 blue =18
+    
+    else if(strcmp(y,"2")==0&&strcmp(w,"4")==0&&strcmp(k,"3")==0){return 15;}//beginner & player1 vs player & second player1 & magenta1 vs green =15
+    else if(strcmp(y,"2")==0&&strcmp(w,"4")==0&&strcmp(k,"4")==0){return 16;}//beginner & player1 vs player & first player1 & magenta1 vs magenta =16
 
-else if(strcmp(x,"1")==0&&strcmp(y,"1")==0&&strcmp(z,"2")==0&&strcmp(w,"3")==0){return 19;}//expert & player vs computer & second player2 green =19
-else if(strcmp(x,"1")==0&&strcmp(y,"1")==0&&strcmp(z,"1")==0&&strcmp(w,"4")==0){return 20;}//expert & player vs computer & first player1 magenta =20
+
+                                                                    //part of computer
+
+    else if(strcmp(x,"2")==0&&strcmp(y,"1")==0&&strcmp(z,"2")==0&&strcmp(w,"1")==0){return 17;}//beginner & player vs computer & second player red =17
+    else if(strcmp(x,"2")==0&&strcmp(y,"1")==0&&strcmp(z,"1")==0&&strcmp(w,"2")==0){return 18;}//beginner & player vs computer & first player blue =18
+
+    else if(strcmp(x,"1")==0&&strcmp(y,"1")==0&&strcmp(z,"2")==0&&strcmp(w,"3")==0){return 19;}//expert & player vs computer & second player green =19
+    else if(strcmp(x,"1")==0&&strcmp(y,"1")==0&&strcmp(z,"1")==0&&strcmp(w,"4")==0){return 20;}//expert & player vs computer & first player magenta =20
+
+
+
+ else if(strcmp(x,"1")==0&&strcmp(y,"1")==0&&strcmp(z,"1")==0&&strcmp(w,"1")==0){return 21;}//expert & player vs computer & first player red =21
+
+ else if(strcmp(x,"1")==0&&strcmp(y,"1")==0&&strcmp(z,"1")==0&&strcmp(w,"2")==0){return 22;}//expert & player vs computer & first player blue =22
+
+ else if(strcmp(x,"1")==0&&strcmp(y,"1")==0&&strcmp(z,"1")==0&&strcmp(w,"3")==0){return 23;}//expert & player vs computer & first player green =23
+ else if(strcmp(x,"1")==0&&strcmp(y,"1")==0&&strcmp(z,"2")==0&&strcmp(w,"1")==0){return 24;}//expert & player vs computer & second player red =24
+
+ else if(strcmp(x,"1")==0&&strcmp(y,"1")==0&&strcmp(z,"2")==0&&strcmp(w,"2")==0){return 25;}//expert & player vs computer & second player blue =25
+ else if(strcmp(x,"1")==0&&strcmp(y,"1")==0&&strcmp(z,"2")==0&&strcmp(w,"4")==0){return 26;}//expert & player vs computer & second player magenta =26
+
+ else if(strcmp(x,"2")==0&&strcmp(y,"1")==0&&strcmp(z,"1")==0&&strcmp(w,"1")==0){return 27;}//beginner & player vs computer & first player red =27
+ else if(strcmp(x,"2")==0&&strcmp(y,"1")==0&&strcmp(z,"1")==0&&strcmp(w,"3")==0){return 28;}//beginner & player vs computer & first player green =28
+
+ else if(strcmp(x,"2")==0&&strcmp(y,"1")==0&&strcmp(z,"1")==0&&strcmp(w,"4")==0){return 29;}//beginner & player vs computer & first player magenta =29
+ else if(strcmp(x,"2")==0&&strcmp(y,"1")==0&&strcmp(z,"2")==0&&strcmp(w,"2")==0){return 30;}//beginner & player vs computer & second player blue =30
+
+ else if(strcmp(x,"2")==0&&strcmp(y,"1")==0&&strcmp(z,"2")==0&&strcmp(w,"3")==0){return 31;}//beginner & player vs computer & second player2 green =31
+ else if(strcmp(x,"2")==0&&strcmp(y,"1")==0&&strcmp(z,"2")==0&&strcmp(w,"4")==0){return 32;}//beginner & player vs computer & second player1 magenta =32
+
 
 
 }
